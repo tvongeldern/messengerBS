@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+		<link rel="stylesheet" href='stylesheet.css'>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+		<script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js"></script>
+		<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+		<script src='scripts.js'></script>
+		<title>LAMP Messenger</title>
+	</head>
+	<body>
+	
+		<nav class="navbar navbar-default" style="z-index:2">
+			<div class="container-fluid">
+				<div class="navbar-header">
+				<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>                        
+				</button>
+				<a class="navbar-brand"><span id='show_user'></span>'s conversations</a>
+				</div>
+				<div class="collapse navbar-collapse" id="myNavbar">
+				<ul class="nav navbar-nav" id="navbar_left">
+					<li class="active"><a>Home</a></li>
+				</ul>
+				<ul class="nav navbar-nav navbar-right" id="navbar_right">
+					<li><span id="searchbar_span"></span></li>
+					<li>
+						<div class="form-inline" style="margin-top:.75em;">
+							<input type="text" class="form-control input-sm" placeholder="Search Users" id="search_bar" onfocusout="$('#searchbar_span').empty()">
+							<button class="btn btn-default btn-sm" type="submit" style='margin-left:-3.15em' onclick="searchCon()"><i class="glyphicon glyphicon-search"></i></button>
+						</div>
+					</li>
+					<li onclick="logOut()"><a><span class="glyphicon glyphicon-log-out"></span>  Logout</a></li>
+				</ul>
+				</div>
+			</div>
+		</nav>
+		
+		
+		<div id="stage">
+		
+			<div id="main_cont" class="container-fluid">
+				
+				<div id='convo_window'>
+					<span id="convo_title"></span>
+					<table id="convo_table">
+
+					</table>
+				</div>
+				
+				<span id="input_span">
+					<div class='form-group col-md-8 col-md-offset-2'><textarea id='input_area' class='form-control' rows='5' style="background-color:#eeeeee"></textarea></div>
+					<button id='send_button' type="button" class="btn btn-default btn-lg col-md-4 col-md-offset-4" onclick="deliver_message()">Send</button>
+				</span>
+			</div>
+		
+		</div>
+	
+		
+		<div id="signIn_div">
+		
+			<div class="form-group col-md-4 col-md-offset-4" id='signIn_form_div'>
+				<h1 align="center" style="color:#eeeeee">Sign In</h1>
+				<br>
+				<input id="signIn_un" type="text" class="form-control" placeholder="Username">
+				<br>
+				<input id="signIn_pw" type="password" class="form-control" placeholder="Password">
+				<br>
+				<button type="button" class="btn btn-default col-md-4 col-md-offset-4" onclick="signIn();">Sign In</button>
+				<br><br><br><span id="signIn_alert_space"></span>
+				<h4 align="center" id="signUp_link" onclick="show_signUp()"><u>Sign Up</u></h4>
+			</div>
+			
+		</div>
+			
+			
+		<div id="signUp_div">
+		
+			<div class="form-group col-md-4 col-md-offset-4" id='signIn_form_div'>
+				<h1 align="center" style="color:#eeeeee">Sign Up</h1>
+				<br>
+				<input id="signUp_un" type="text" class="form-control" placeholder="Username">
+				<br>
+				<input id="signUp_pw" type="password" class="form-control" placeholder="Password">
+				<br>
+				<input id="signUp_pw2" type="password" class="form-control" placeholder="Re-Type Password">
+				<br>
+				<button type="button" class="btn btn-default col-md-4 col-md-offset-4" onclick="createUser()">Sign Up</button>
+				<br><br><span id="alert_space"></span>
+				<h4 align="center" id="signUp_link" onclick="show_signUp()"><u>Sign In</u></h4>
+			</div>
+			
+		</div>
+		
+	</body>
+</head>

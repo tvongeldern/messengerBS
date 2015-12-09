@@ -1,0 +1,118 @@
+body {
+	background-color: #383838;
+}
+
+#navbar_left li:hover {
+	cursor:pointer;
+}
+
+#navbar_right li:hover {
+	cursor:pointer;
+}
+
+#stage {
+	background-color: white;
+	position: absolute;
+	width: 100%;
+	max-width: 75vh;
+	left: 0;
+	right: 0;
+	top: 52px;
+	margin-left:auto;
+	margin-right:auto;
+}
+
+#main_cont {
+	height : 100%;
+}
+
+#convo_window {
+	position: absolute;
+	border: 1px solid #d6d6d6;
+	background-color: #eeeeee;
+	border-radius: 1vh;
+	height: 72.5%;
+	width: 90%;
+	margin-left: 2.5%;
+	bottom: 25%;
+	overflow: hidden;
+}
+
+#input_span {
+	position: absolute;
+	bottom: 5%;
+	width: 100%;
+	height: 17.5%;
+}
+
+#convo_title {
+	position: absolute;
+	font-size: 2em;
+	width: 100%;
+	text-align: center;
+	background-color: #d6d6d6;
+}
+
+#convo_table {
+	position: absolute;
+	width: 100%;
+	bottom: 0;
+}
+
+.from_me {
+	border: 1px solid #d6d6d6;
+	border-radius: .5em;
+	background-color: white;
+	float: right;
+	clear: both;
+	width: 65%;
+	margin-right: 2.5%;
+	padding-right: 5%;
+	padding-left: 5%;
+	margin-bottom: .5em;
+}
+
+.from_them {
+	border: 1px solid #d6d6d6;
+	border-radius: .5em;
+	background-color: #d6d6d6;
+	float: left;
+	clear: both;
+	width: 65%;
+	margin-left: 2.5%;
+	padding-right: 5%;
+	padding-left: 5%;
+	margin-bottom: .5em;
+}
+
+#signIn_div,#signUp_div {
+	position: fixed;
+	width: 100%;
+	height: 100%;
+	left:0;
+	top:0;
+	z-index:5;
+	background-color: #383838;
+}
+
+#signIn_form_div {
+	position: absolute;
+	height: 35%;
+	top:0;
+	bottom:0;
+	margin-top:auto;
+	margin-bottom:auto;
+}
+
+#signUp_link {
+	color: #eeeeee;
+}
+
+
+#signUp_link:hover {
+	cursor:pointer;
+}
+
+#signUp_div {
+	display:none;
+}
